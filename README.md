@@ -24,6 +24,7 @@ Event<br>
 	&emsp;- Data Action n<br>
 	&emsp;...<br>
 Events can be assigned to gameplay time using `UWrWorldTimeEventConfig`
+
 ---
  
 ## 🧱 Composition
@@ -31,6 +32,7 @@ Events can be assigned to gameplay time using `UWrWorldTimeEventConfig`
 <br><br>
 The project consists of subsystems: one `UWrWorldTimeSubSystem` for time management, and another `UWrWorldTimeEventConfig` that handles events based on gameplay time. The entire structure was designed to allow for the easy addition of further events (composed of actions).<br>
 The game logic also features an entity known as `UWrEventContext`. This allows for the easy passing of dynamic data (which must be calculated on the fly) to the action logic. That context is use inside `UWrEventCondition` to check if component can receive event
+
 ---
 
 ## 📈 Further improvements
@@ -43,6 +45,7 @@ A `condition` mechanism can be introduced to data actions to check whether a giv
 That’s why I created an action (event) that allows for this. This action is triggered at 10:00.
 2. Task states: 'actor disappears'. The task does not describe exactly what this means. That’s why I created an action that removes the actor from the map (Destroy).
 3. The task also does not specify what happens when the next day begins in the game. In my implementation, the events won't fire again.<br>
+
 ---
 
 ## 🛠️ Debug Utilities & CVars
